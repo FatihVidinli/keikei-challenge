@@ -3,29 +3,19 @@ import '../styles/style.scss'
 import Swiper from 'swiper/bundle';
 
 
-const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
+
   
-    // If we need pagination
-   
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-  
-    // Navigation arrows
+  var swiper = new Swiper(".section5-slider-container", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    freeMode: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
     },
-    
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hider:true,
-    },
+    pagination: {
+      el: ".swiper-pagination"
+    }
   });
 
 export default function MyApp({ Component, pageProps}){

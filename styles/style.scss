@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
   }
+
 * {
     padding: 0;
     margin: 0;
@@ -71,7 +72,31 @@ html, body {
         }
     }
 }
-
+     .section2{
+        height: 60vh;
+        width: 100%;
+        background-image:url(https://picsum.photos/id/870/1060/600?grayscale&blur=2);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    .section2-content{
+        padding:100px 60px;
+        h2,span{
+            color: black;
+        }
+        button{
+            text-align: center;
+            border: 1px solid black;
+            color: black;
+            border-radius: 5px;
+            height: 40px;
+            width: 150px;
+            background-color: transparent;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    }
+}
 .container {
     height: 100%;
     transition: var(--animation-speed) transform;
@@ -118,20 +143,26 @@ html, body {
     width: 100%;
     background: #222;
 }
-.hamburger-menu span {
-    transform: translateY(var(--space));
-    transition: var(--animation-speed) var(--animation-speed) background-color;
-}
-.hamburger-menu span::before {
-    position: absolute;
-    bottom: var(--space);
-    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom;
-}
-.hamburger-menu span::after {
-    position: absolute;
-    top: var(--space);
-    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top;
-}
+.hamburger-menu{
+    span {
+        transform: translateY(var(--space));
+        transition: var(--animation-speed) var(--animation-speed) background-color;
+    }
+} 
+.hamburger-menu{
+    span::before {
+        position: absolute;
+        bottom: var(--space);
+        transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom;
+    }
+} 
+.hamburger-menu{
+    span::after {
+        position: absolute;
+        top: var(--space);
+        transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top;
+    }
+} 
 #menu-toggle {
     display: none;
 }
@@ -145,93 +176,48 @@ html, body {
     opacity: 1;
     visibility: visible;
 }
-#menu-toggle:checked ~ .container .hamburger-menu span {
-    background: transparent;
-    transition: var(--animation-speed) background-color;
-}
-#menu-toggle:checked ~ .container .hamburger-menu span::before {
-    transform: rotate(-45deg);
-    bottom: 0;
-    background-color: #fff;
-    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom;
-}
-#menu-toggle:checked ~ .container .hamburger-menu span::after {
-    transform: rotate(45deg);
-    top: 0;
-    background-color: #fff;
-    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top;
-}
+#menu-toggle:checked ~ .container{
+    .hamburger-menu{
+        span {
+            background: transparent;
+            transition: var(--animation-speed) background-color;
+        }
+    } 
+} 
+#menu-toggle:checked ~ .container{
+    .hamburger-menu{
+        span::before {
+            transform: rotate(-45deg);
+            bottom: 0;
+            background-color: #fff;
+            transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom;
+        }
+    }
+} 
+#menu-toggle:checked ~ .container{
+    .hamburger-menu{
+        span::after {
+            transform: rotate(45deg);
+            top: 0;
+            background-color: #fff;
+            transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top;
+        }
+    } 
+} 
 #logos{
     margin-left: 70px;
 }
-.section2{
-    height: 60vh;
-    width: 100%;
-    background-image:url(https://picsum.photos/id/870/1060/600?grayscale&blur=2);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.section2-content{
-    padding: 150px 80px;
-    
-}
-.section2-content{
-    h2{
-        color: black;
-        max-width: 50px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-} 
-.section2-content{
-    span{
-        color: black;
-        
-    }
-} 
-.section2-content{
-    button{
-        text-align: center;
-        border: 1px solid black;
-        color: black;
-        border-radius: 5px;
-        height: 40px;
-        width: 150px;
-        background-color: transparent;
-        margin-top: 15px;
-        cursor: pointer;
-    }
-} 
-.section2-content{
-    button:hover{
-        background-color: grey;
-        color: white;
-    }
-} 
-
-.section3-content{
-    max-width: 300px;
-}
-.section3-content{
-    h2{
-        border-bottom: 1px solid ;
-        color: black;
-        padding: 30px 0 0 50px;
-        font-size: 20px;
-    }
-} 
 .swiper-container-top {
     width: 100%;
     height: 100%;
 }
 .section4{
-    height: 300px;
+    height: 500px;
     width: 100%;
-    background-image: url(https://picsum.photos/id/870/1060/600?grayscale&blur=2);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    video{
+        width: 100%;
+        height: 500px;
+    }
 }
 .header{
     .actions{
@@ -240,21 +226,7 @@ html, body {
         }
     }
 }
-.section4{
-    video{
-        width: 100%;
-        height: 300px;
-    }
-}
-.swiper-slide{
-    padding-right: 20px;
-}
-.section3-slider{
-    padding: 0 50px;
-}
-.section5{
-    background-color: gray;
-}
+
 .section6-grid{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -263,6 +235,17 @@ html, body {
 .grid-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    .content{
+        margin: 80px 80px;
+        button{
+            border: 1px solid black;
+            background-color: transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 150px;
+            margin-top: 15px;
+        }
+    }
     .contents{
         margin: 80px 80px;
         
@@ -280,6 +263,7 @@ html, body {
     }
 }
 .footer{
+    background-color: rgb(247, 247, 247);
     padding: 100px 30px;
     .footer-grid{
         display: grid;
@@ -309,29 +293,179 @@ html, body {
     color: white;
     font-size: 10px;
     align-items: center;
-    p,span{
+    p {
         margin: 0 20px;
     }
+    span{
+        margin: 0 20px;
+        cursor: pointer;
+    }
 }
-@media only screen and (max-width: 768px){
+.swiper-slide{
+    img{
+        max-height: 760px;
+        
+    }
+}
+.baslik{
+    width: 100%;
+}
+.slider-span-content{
+    color: black;
+    text-align: center;
+}
+.content-slider{
+    text-align: center;
+}
+.footer-logo{
+    span{
+        color: black;
+        
+    }
+}
+.media-footer-bottom{
+    display: inline-flex;
+    ul li{
+        margin-right: 50px;
+    }
+}
+.footer-content{
+    margin: 0px 85px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .footer-logo{
+        display: inline-flex;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    ul li{
+        color: black;
+        padding-top: 10px;
+        text-align: center;
+        cursor: pointer;
+        img{
+            max-width: 200px;
+            max-height: 200px;
+        }
+        input{
+            border-bottom: 1px solid black;
+        }
+    }
+}
+.section3-title{
+    cursor: pointer;
+    p{
+        padding-left: 50px;
+        max-width: 250px;
+        color: black;
+        border-bottom: 1px solid black;
+        position: sticky;   
+    }
+   .content-slider{
+       padding: 30px 0;
+   }
+   
+}
+.section5{
+    background-color: rgb(247, 247, 247);
+    p{
+        padding-left: 50px;
+        max-width: 250px;
+        color: black;
+        border-bottom: 1px solid black;
+        position: sticky;  
+
+        
+    }
+    .swiper-slide:nth-child(even){
+        
+        img{
+           max-height: 250px;
+           bottom: 0;
+           
+       }
+   }
+}
+.hero-slider{
+    .swiper-wrapper{
+        width: max-content;
+        .swiper-slide{
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){  
     #logos{
         margin-left: 10px;
+        font-size: 16px;
     }
-    .section6-grid .contents{
-        grid-template-columns:unset;
-        display: grid;
-        grid-template-rows: repeat(4,1fr)
-        
+    .media-footer-bottom{
+        display: inline-flex;
+        margin:20px 0 0 50px;
+    }
+    .section5{
+        p{
+            color: black;
+            font-size: 20px;
+            border-bottom: 1px solid black;
+        }
+    }
+    .section6{
+        .section6-grid{
+            grid-template-columns: unset;
+           
+        }
+    }
+    .grid-content{
+        .content{
+            margin-top: 300px;
+        }
+        .contents{
+            margin-top: 300px;
+            order: 2;
+        }
+    } 
+}
+
+@media only screen and (max-width: 1250px){
+    #logos{
+        margin-left: 10px;
+        font-size: 16px;
     }
     .section2{
         height: unset;
     }
     .section2-content{
-        padding: 30px 30px;
         font-size: 15px;
     }
-    .footer-grid{
-        grid-template-columns: unset;
-        grid-template-rows: 1fr;
+    
+    .section5{
+        p{
+            color: black;
+            font-size: 20px;
+            border-bottom: 1px solid black;
+        }
     }
+    .section6{
+        .section6-grid{
+            grid-template-columns: unset;
+           
+        }
+    }
+    .grid-content{
+        .content{
+            margin-top: 300px;
+            margin-left: 200px;
+        }
+        .contents{
+            margin-top: 300px;
+            order: 2;
+          
+        }
+    } 
 }
+

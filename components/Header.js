@@ -1,29 +1,37 @@
-import React, { Component } from 'react'
-function  Header() {
-        return(
-            <div className="slider">
-      <div className="swiper-container">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">
-            <div className="swiper-zoom-container">
-              <img src="/slider1.jpg" />
-            </div>
-          </div>
-        <div className="swiper-slide">
-          <div className="swiper-zoom-container">
-            <img src="/slider2.jpg" />
-          </div>
-        </div>
-      <div className="swiper-slide">
-        <div className="swiper-zoom-container">
-          <img src="/slider1.jpg" />
-        </div>
-      </div>
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+export default () => {
+  return (
+    <div className="hero-slider">
+      <Swiper
+      spaceBetween={0}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide>
+      <a href="#" target="_blank"><img src="/slider2.jpg" /></a>
+      </SwiperSlide>
+      <SwiperSlide>
+      <a href="#" target="_blank"><img src="/slider2.jpg" /></a>
+      </SwiperSlide>
+      <SwiperSlide>
+      <a href="#" target="_blank"><img src="/slider2.jpg" /></a>
+      </SwiperSlide>
+      <SwiperSlide>
+      <a href="#" target="_blank"><img src="/slider2.jpg" /></a>
+      </SwiperSlide>
+      <SwiperSlide>
+      <a href="#" target="_blank"><img src="/slider2.jpg" /></a>
+      </SwiperSlide>
+      
+      
+
+      
+    </Swiper>
     </div>
-      </div>
-      <div class="swiper-scrollbar"></div>
-  
-    </div>
-        )
-}
-export default Header
+  );
+};
